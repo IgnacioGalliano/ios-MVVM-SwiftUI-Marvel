@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		662735A92BAE57A3008D5CA4 /* CharacterListViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662735A82BAE57A3008D5CA4 /* CharacterListViewTests.swift */; };
 		66950D7A2BA3B6DA00DFACC3 /* MarverDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66950D792BA3B6DA00DFACC3 /* MarverDBManager.swift */; };
 		66950D7C2BA3B71800DFACC3 /* MarvelMovieDB-info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 66950D7B2BA3B71800DFACC3 /* MarvelMovieDB-info.plist */; };
 		66950D7F2BA3C13700DFACC3 /* Encryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66950D7E2BA3C13700DFACC3 /* Encryptor.swift */; };
@@ -62,6 +63,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		662735A82BAE57A3008D5CA4 /* CharacterListViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CharacterListViewTests.swift; path = MVVMMarvelSwiftUITests/Presentation/CharacterListViewTests.swift; sourceTree = SOURCE_ROOT; };
 		66950D792BA3B6DA00DFACC3 /* MarverDBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarverDBManager.swift; sourceTree = "<group>"; };
 		66950D7B2BA3B71800DFACC3 /* MarvelMovieDB-info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "MarvelMovieDB-info.plist"; sourceTree = "<group>"; };
 		66950D7E2BA3C13700DFACC3 /* Encryptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encryptor.swift; sourceTree = "<group>"; };
@@ -128,6 +130,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		662735A32BAE5769008D5CA4 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				662735A42BAE5776008D5CA4 /* CharacterList */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		662735A42BAE5776008D5CA4 /* CharacterList */ = {
+			isa = PBXGroup;
+			children = (
+				662735A52BAE5782008D5CA4 /* Builder */,
+				662735A72BAE5790008D5CA4 /* View */,
+				662735A62BAE5789008D5CA4 /* ViewModel */,
+			);
+			path = CharacterList;
+			sourceTree = "<group>";
+		};
+		662735A52BAE5782008D5CA4 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		662735A62BAE5789008D5CA4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		662735A72BAE5790008D5CA4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				662735A82BAE57A3008D5CA4 /* CharacterListViewTests.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		66950D782BA3B6D100DFACC3 /* MarverDBManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,6 +235,7 @@
 		66DD56552B954BDC00451CCA /* MVVMMarvelSwiftUITests */ = {
 			isa = PBXGroup;
 			children = (
+				662735A32BAE5769008D5CA4 /* Presentation */,
 				66DD56562B954BDC00451CCA /* MVVMMarvelSwiftUITests.swift */,
 			);
 			path = MVVMMarvelSwiftUITests;
@@ -604,6 +647,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				662735A92BAE57A3008D5CA4 /* CharacterListViewTests.swift in Sources */,
 				66DD56572B954BDC00451CCA /* MVVMMarvelSwiftUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
