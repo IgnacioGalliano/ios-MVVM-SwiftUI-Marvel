@@ -5,101 +5,53 @@
 //  Created by Nacho on 22/03/2024.
 //
 
-import Foundation
 import XCTest
-@testable import MVVMMarvelSwiftUI
 import SwiftUI
+import UIKit
+import SnapshotTesting
+@testable import MVVMMarvelSwiftUI
 
 class CharacterListViewTests: XCTestCase {
-    private var sut: (any View)!
+    private var sut: UIViewController!
     private var viewModelSpy: CharacterListViewModelSpy!
     private var coordinatorSpy: CharactersCoordinatorSpy!
 
     func testCharacterListViewLoading() {
         givenASUT()
+        whenTheViewIsLoading()
+        // Then assert snapshot
+        assertSnapshot(of: sut, as: .image)
     }
 
-    func givenASUT() {
+    func testCharacterListViewWithTwoCells() {
+        givenASUT()
+        whenTheViewLoadTwoCells()
+        // Then assert snapshot
+        assertSnapshot(of: sut, as: .image)
+    }
+
+    private func givenASUT() {
         coordinatorSpy = CharactersCoordinatorSpy()
         viewModelSpy = CharacterListViewModelSpy()
-        sut = CharacterListView(viewModel: viewModelSpy).environment(coordinatorSpy)
-    }
-}
-
-class CharactersCoordinatorSpy: CharactersCoordinatable, Observable {
-    var invokedGoToDetail = false
-    var invokedGoToDetailCount = 0
-    var invokedGoToDetailParameters: (character: CharacterModel, Void)?
-    var invokedGoToDetailParametersList = [(character: CharacterModel, Void)]()
-
-    func goToDetail(character: CharacterModel) {
-        invokedGoToDetail = true
-        invokedGoToDetailCount += 1
-        invokedGoToDetailParameters = (character, ())
-        invokedGoToDetailParametersList.append((character, ()))
+        let view = CharacterListView(viewModel: viewModelSpy).environment(coordinatorSpy)
+        sut = UIHostingController(rootView: view)
     }
 
-    var invokedPopView = false
-    var invokedPopViewCount = 0
-
-    func popView() {
-        invokedPopView = true
-        invokedPopViewCount += 1
+    private func whenTheViewIsLoading() {
+        viewModelSpy.stubbedShowLoading = true
     }
 
-    var invokedShowPopUp = false
-    var invokedShowPopUpCount = 0
-
-    func showPopUp() {
-        invokedShowPopUp = true
-        invokedShowPopUpCount += 1
-    }
-}
-
-class CharacterListViewModelSpy: CharacterListViewModelable {
-    var invokedCharacterListGetter = false
-    var invokedCharacterListGetterCount = 0
-    var stubbedCharacterList: [CharacterModel]! = []
-
-    var characterList: [CharacterModel] {
-        invokedCharacterListGetter = true
-        invokedCharacterListGetterCount += 1
-        return stubbedCharacterList
-    }
-
-    var invokedShowLoadingGetter = false
-    var invokedShowLoadingGetterCount = 0
-    var stubbedShowLoading: Bool! = false
-
-    var showLoading: Bool {
-        invokedShowLoadingGetter = true
-        invokedShowLoadingGetterCount += 1
-        return stubbedShowLoading
-    }
-
-    var invokedGetQuantityOfCharactersGetter = false
-    var invokedGetQuantityOfCharactersGetterCount = 0
-    var stubbedGetQuantityOfCharacters: Int! = 0
-
-    var getQuantityOfCharacters: Int {
-        invokedGetQuantityOfCharactersGetter = true
-        invokedGetQuantityOfCharactersGetterCount += 1
-        return stubbedGetQuantityOfCharacters
-    }
-
-    var invokedLoadCharacters = false
-    var invokedLoadCharactersCount = 0
-
-    func loadCharacters() {
-        invokedLoadCharacters = true
-        invokedLoadCharactersCount += 1
-    }
-
-    var invokedLoadCharactersAwait = false
-    var invokedLoadCharactersAwaitCount = 0
-
-    func loadCharactersAwait() {
-        invokedLoadCharactersAwait = true
-        invokedLoadCharactersAwaitCount += 1
+    private func whenTheViewLoadTwoCells() {
+        let firstCharacter = CharacterModel(id: 1,
+                                            name: "Bronco",
+                                            description: "The best Marvel character",
+                                            thumbnail: Thumbnail(path: "",
+                                                                 imageExtension: ""))
+        let secondCharacter = CharacterModel(id: 2,
+                                             name: "Spiderman",
+                                             description: "The second best Marvel character",
+                                             thumbnail: Thumbnail(path: "",
+                                                                  imageExtension: ""))
+        viewModelSpy.stubbedCharacterList = [firstCharacter, secondCharacter]
     }
 }

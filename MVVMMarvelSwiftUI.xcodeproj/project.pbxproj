@@ -8,13 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		662735A92BAE57A3008D5CA4 /* CharacterListViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662735A82BAE57A3008D5CA4 /* CharacterListViewTests.swift */; };
+		662735AD2BAF1AC9008D5CA4 /* InlineSnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 662735AC2BAF1AC9008D5CA4 /* InlineSnapshotTesting */; };
+		662735AF2BAF1AC9008D5CA4 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 662735AE2BAF1AC9008D5CA4 /* SnapshotTesting */; };
+		662735B32BAF1C0A008D5CA4 /* CharactersCoordinatorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662735B22BAF1C0A008D5CA4 /* CharactersCoordinatorSpy.swift */; };
+		662735B52BAF1C4D008D5CA4 /* CharacterListViewModelSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662735B42BAF1C4D008D5CA4 /* CharacterListViewModelSpy.swift */; };
 		66950D7A2BA3B6DA00DFACC3 /* MarverDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66950D792BA3B6DA00DFACC3 /* MarverDBManager.swift */; };
 		66950D7C2BA3B71800DFACC3 /* MarvelMovieDB-info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 66950D7B2BA3B71800DFACC3 /* MarvelMovieDB-info.plist */; };
 		66950D7F2BA3C13700DFACC3 /* Encryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66950D7E2BA3C13700DFACC3 /* Encryptor.swift */; };
 		66DD56462B954BDA00451CCA /* MVVMMarvelSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DD56452B954BDA00451CCA /* MVVMMarvelSwiftUIApp.swift */; };
 		66DD564A2B954BDC00451CCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66DD56492B954BDC00451CCA /* Assets.xcassets */; };
 		66DD564D2B954BDC00451CCA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66DD564C2B954BDC00451CCA /* Preview Assets.xcassets */; };
-		66DD56572B954BDC00451CCA /* MVVMMarvelSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DD56562B954BDC00451CCA /* MVVMMarvelSwiftUITests.swift */; };
 		66DD56612B954BDC00451CCA /* MVVMMarvelSwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DD56602B954BDC00451CCA /* MVVMMarvelSwiftUIUITests.swift */; };
 		66DD56632B954BDC00451CCA /* MVVMMarvelSwiftUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DD56622B954BDC00451CCA /* MVVMMarvelSwiftUIUITestsLaunchTests.swift */; };
 		66DD567C2B96A97300451CCA /* CharacterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DD567B2B96A97300451CCA /* CharacterListView.swift */; };
@@ -64,6 +67,8 @@
 
 /* Begin PBXFileReference section */
 		662735A82BAE57A3008D5CA4 /* CharacterListViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CharacterListViewTests.swift; path = MVVMMarvelSwiftUITests/Presentation/CharacterListViewTests.swift; sourceTree = SOURCE_ROOT; };
+		662735B22BAF1C0A008D5CA4 /* CharactersCoordinatorSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersCoordinatorSpy.swift; sourceTree = "<group>"; };
+		662735B42BAF1C4D008D5CA4 /* CharacterListViewModelSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewModelSpy.swift; sourceTree = "<group>"; };
 		66950D792BA3B6DA00DFACC3 /* MarverDBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarverDBManager.swift; sourceTree = "<group>"; };
 		66950D7B2BA3B71800DFACC3 /* MarvelMovieDB-info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "MarvelMovieDB-info.plist"; sourceTree = "<group>"; };
 		66950D7E2BA3C13700DFACC3 /* Encryptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encryptor.swift; sourceTree = "<group>"; };
@@ -72,7 +77,6 @@
 		66DD56492B954BDC00451CCA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66DD564C2B954BDC00451CCA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		66DD56522B954BDC00451CCA /* MVVMMarvelSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVVMMarvelSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		66DD56562B954BDC00451CCA /* MVVMMarvelSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMMarvelSwiftUITests.swift; sourceTree = "<group>"; };
 		66DD565C2B954BDC00451CCA /* MVVMMarvelSwiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVVMMarvelSwiftUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		66DD56602B954BDC00451CCA /* MVVMMarvelSwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMMarvelSwiftUIUITests.swift; sourceTree = "<group>"; };
 		66DD56622B954BDC00451CCA /* MVVMMarvelSwiftUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMMarvelSwiftUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -117,6 +121,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				662735AD2BAF1AC9008D5CA4 /* InlineSnapshotTesting in Frameworks */,
+				662735AF2BAF1AC9008D5CA4 /* SnapshotTesting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,6 +176,30 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		662735AB2BAF1AC9008D5CA4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		662735B02BAF1BF5008D5CA4 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				662735B12BAF1BFF008D5CA4 /* Spies */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		662735B12BAF1BFF008D5CA4 /* Spies */ = {
+			isa = PBXGroup;
+			children = (
+				662735B22BAF1C0A008D5CA4 /* CharactersCoordinatorSpy.swift */,
+				662735B42BAF1C4D008D5CA4 /* CharacterListViewModelSpy.swift */,
+			);
+			path = Spies;
+			sourceTree = "<group>";
+		};
 		66950D782BA3B6D100DFACC3 /* MarverDBManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,6 +223,7 @@
 				66DD56552B954BDC00451CCA /* MVVMMarvelSwiftUITests */,
 				66DD565F2B954BDC00451CCA /* MVVMMarvelSwiftUIUITests */,
 				66DD56432B954BDA00451CCA /* Products */,
+				662735AB2BAF1AC9008D5CA4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -235,8 +266,8 @@
 		66DD56552B954BDC00451CCA /* MVVMMarvelSwiftUITests */ = {
 			isa = PBXGroup;
 			children = (
+				662735B02BAF1BF5008D5CA4 /* Mocks */,
 				662735A32BAE5769008D5CA4 /* Presentation */,
-				66DD56562B954BDC00451CCA /* MVVMMarvelSwiftUITests.swift */,
 			);
 			path = MVVMMarvelSwiftUITests;
 			sourceTree = "<group>";
@@ -514,6 +545,10 @@
 				66DD56542B954BDC00451CCA /* PBXTargetDependency */,
 			);
 			name = MVVMMarvelSwiftUITests;
+			packageProductDependencies = (
+				662735AC2BAF1AC9008D5CA4 /* InlineSnapshotTesting */,
+				662735AE2BAF1AC9008D5CA4 /* SnapshotTesting */,
+			);
 			productName = MVVMMarvelSwiftUITests;
 			productReference = 66DD56522B954BDC00451CCA /* MVVMMarvelSwiftUITests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -568,6 +603,9 @@
 				Base,
 			);
 			mainGroup = 66DD56392B954BD900451CCA;
+			packageReferences = (
+				662735AA2BAE59BB008D5CA4 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
+			);
 			productRefGroup = 66DD56432B954BDA00451CCA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -648,7 +686,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				662735A92BAE57A3008D5CA4 /* CharacterListViewTests.swift in Sources */,
-				66DD56572B954BDC00451CCA /* MVVMMarvelSwiftUITests.swift in Sources */,
+				662735B32BAF1C0A008D5CA4 /* CharactersCoordinatorSpy.swift in Sources */,
+				662735B52BAF1C4D008D5CA4 /* CharacterListViewModelSpy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -968,6 +1007,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		662735AA2BAE59BB008D5CA4 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.15.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		662735AC2BAF1AC9008D5CA4 /* InlineSnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 662735AA2BAE59BB008D5CA4 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = InlineSnapshotTesting;
+		};
+		662735AE2BAF1AC9008D5CA4 /* SnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 662735AA2BAE59BB008D5CA4 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = SnapshotTesting;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 66DD563A2B954BD900451CCA /* Project object */;
 }

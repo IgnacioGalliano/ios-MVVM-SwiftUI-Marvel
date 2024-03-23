@@ -47,7 +47,7 @@ struct CharacterRow: View {
         }
         .frame(height: Constants.rowHeight, alignment: .top)
         .frame(maxWidth: .infinity)
-        .padding([.leading, .leading], Constants.commonPadding)
+        .padding([.leading, .top], Constants.commonPadding)
         .background(Rectangle().fill(Color.white))
         .foregroundColor(.white)
         .cornerRadius(Constants.commonRadius)
