@@ -12,6 +12,8 @@
 		662735AF2BAF1AC9008D5CA4 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 662735AE2BAF1AC9008D5CA4 /* SnapshotTesting */; };
 		662735B32BAF1C0A008D5CA4 /* CharactersCoordinatorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662735B22BAF1C0A008D5CA4 /* CharactersCoordinatorSpy.swift */; };
 		662735B52BAF1C4D008D5CA4 /* CharacterListViewModelSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662735B42BAF1C4D008D5CA4 /* CharacterListViewModelSpy.swift */; };
+		662735B72BAF22DB008D5CA4 /* CharacterListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662735B62BAF22DB008D5CA4 /* CharacterListViewModelTests.swift */; };
+		662735B92BAF82C5008D5CA4 /* GetCharactersSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662735B82BAF82C5008D5CA4 /* GetCharactersSpy.swift */; };
 		66950D7A2BA3B6DA00DFACC3 /* MarverDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66950D792BA3B6DA00DFACC3 /* MarverDBManager.swift */; };
 		66950D7C2BA3B71800DFACC3 /* MarvelMovieDB-info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 66950D7B2BA3B71800DFACC3 /* MarvelMovieDB-info.plist */; };
 		66950D7F2BA3C13700DFACC3 /* Encryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66950D7E2BA3C13700DFACC3 /* Encryptor.swift */; };
@@ -69,6 +71,8 @@
 		662735A82BAE57A3008D5CA4 /* CharacterListViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CharacterListViewTests.swift; path = MVVMMarvelSwiftUITests/Presentation/CharacterListViewTests.swift; sourceTree = SOURCE_ROOT; };
 		662735B22BAF1C0A008D5CA4 /* CharactersCoordinatorSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersCoordinatorSpy.swift; sourceTree = "<group>"; };
 		662735B42BAF1C4D008D5CA4 /* CharacterListViewModelSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewModelSpy.swift; sourceTree = "<group>"; };
+		662735B62BAF22DB008D5CA4 /* CharacterListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewModelTests.swift; sourceTree = "<group>"; };
+		662735B82BAF82C5008D5CA4 /* GetCharactersSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCharactersSpy.swift; sourceTree = "<group>"; };
 		66950D792BA3B6DA00DFACC3 /* MarverDBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarverDBManager.swift; sourceTree = "<group>"; };
 		66950D7B2BA3B71800DFACC3 /* MarvelMovieDB-info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "MarvelMovieDB-info.plist"; sourceTree = "<group>"; };
 		66950D7E2BA3C13700DFACC3 /* Encryptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encryptor.swift; sourceTree = "<group>"; };
@@ -147,23 +151,16 @@
 		662735A42BAE5776008D5CA4 /* CharacterList */ = {
 			isa = PBXGroup;
 			children = (
-				662735A52BAE5782008D5CA4 /* Builder */,
 				662735A72BAE5790008D5CA4 /* View */,
 				662735A62BAE5789008D5CA4 /* ViewModel */,
 			);
 			path = CharacterList;
 			sourceTree = "<group>";
 		};
-		662735A52BAE5782008D5CA4 /* Builder */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Builder;
-			sourceTree = "<group>";
-		};
 		662735A62BAE5789008D5CA4 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				662735B62BAF22DB008D5CA4 /* CharacterListViewModelTests.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -196,6 +193,7 @@
 			children = (
 				662735B22BAF1C0A008D5CA4 /* CharactersCoordinatorSpy.swift */,
 				662735B42BAF1C4D008D5CA4 /* CharacterListViewModelSpy.swift */,
+				662735B82BAF82C5008D5CA4 /* GetCharactersSpy.swift */,
 			);
 			path = Spies;
 			sourceTree = "<group>";
@@ -685,6 +683,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				662735B72BAF22DB008D5CA4 /* CharacterListViewModelTests.swift in Sources */,
+				662735B92BAF82C5008D5CA4 /* GetCharactersSpy.swift in Sources */,
 				662735A92BAE57A3008D5CA4 /* CharacterListViewTests.swift in Sources */,
 				662735B32BAF1C0A008D5CA4 /* CharactersCoordinatorSpy.swift in Sources */,
 				662735B52BAF1C4D008D5CA4 /* CharacterListViewModelSpy.swift in Sources */,
