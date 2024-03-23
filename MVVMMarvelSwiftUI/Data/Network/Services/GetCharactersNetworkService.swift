@@ -44,9 +44,10 @@ class DefaultGetCharactersNetworkService: GetCharactersNetworkService {
 
     func execute() async throws -> ResponseListDTO {
         var components = URLComponents(string: Constants.baseURL + Constants.versionPath + Constants.charactersPath)!
-        let hash = Encryptor.MD5(string: "1" + MarverDBManager.privateKey + MarverDBManager.publicKey)
+        let timestamp = String(Int(NSDate().timeIntervalSince1970))
+        let hash = Encryptor.MD5(string: timestamp + MarverDBManager.privateKey + MarverDBManager.publicKey)
         components.queryItems = [
-            URLQueryItem(name: Constants.ts, value: "1"),
+            URLQueryItem(name: Constants.ts, value: timestamp),
             URLQueryItem(name: Constants.apikey, value: MarverDBManager.publicKey),
             URLQueryItem(name: Constants.hash, value: hash)
         ]
