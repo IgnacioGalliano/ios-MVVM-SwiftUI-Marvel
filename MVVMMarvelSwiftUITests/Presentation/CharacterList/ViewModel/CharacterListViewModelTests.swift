@@ -43,9 +43,9 @@ class CharacterListViewModelTests: XCTestCase {
         try! await Task.sleep(for: .seconds(0.1))
         XCTAssertTrue(getCharacterSpy.invokedExecute)
         XCTAssertEqual(getCharacterSpy.invokedExecuteCount, 1)
-        XCTAssertEqual(self.sut.getQuantityOfCharacters, 2)
-        XCTAssertEqual(self.sut.characterList.first?.id, 1)
-        XCTAssertEqual(self.sut.characterList.first?.name, "Bronco")
-        XCTAssertEqual(self.sut.characterList.first?.description, "The best Marvel character")
+        XCTAssertEqual(sut.getQuantityOfCharacters, 2)
+        XCTAssertEqual(sut.characterList.first?.id, 1)
+        XCTAssertEqual(sut.characterList.first?.name, "Bronco")
+        XCTAssertEqual(sut.characterList.first?.description, "The best Marvel character")
     }
 }

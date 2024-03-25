@@ -44,7 +44,7 @@ class CharactersCoordinator: ObservableObject, CharactersCoordinatable {
         }
     }
 
-    // MARK: - View provider
+    // MARK: - Sheet provider
     @ViewBuilder
     func getSheet(sheet: Sheet) -> some View {
         switch sheet {

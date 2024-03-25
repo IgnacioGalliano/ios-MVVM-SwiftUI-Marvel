@@ -43,18 +43,25 @@ class DefaultGetCharactersNetworkService: GetCharactersNetworkService {
     }
 
     func execute() async throws -> ResponseListDTO {
-        var components = URLComponents(string: Constants.baseURL + Constants.versionPath + Constants.charactersPath)!
+        guard var urlComponents = URLComponents(string: URLBuilder.buildCharacterPath()) else {
+            throw Constants.urlcannotBeFormed
+        }
+
         let timestamp = String(Int(NSDate().timeIntervalSince1970))
         let hash = Encryptor.MD5(string: timestamp + MarverDBManager.privateKey + MarverDBManager.publicKey)
-        components.queryItems = [
+        urlComponents.queryItems = [
             URLQueryItem(name: Constants.ts, value: timestamp),
             URLQueryItem(name: Constants.apikey, value: MarverDBManager.publicKey),
             URLQueryItem(name: Constants.hash, value: hash)
         ]
 
+        guard let url = urlComponents.url else {
+            throw Constants.urlcannotBeFormed
+        }
+
         let urlSession = URLSession.shared
-        let request = URLRequest(url: components.url!)
-        let (data, response) = try await urlSession.data(for: request)
+        let request = URLRequest(url: url)
+        let (data, _) = try await urlSession.data(for: request)
         let products = try JSONDecoder().decode(ResponseListDTO.self, from: data)
         return products
     }
@@ -66,5 +73,6 @@ class DefaultGetCharactersNetworkService: GetCharactersNetworkService {
         static let baseURL = "http://gateway.marvel.com"
         static let versionPath = "/v1"
         static let charactersPath = "/public/characters"
+        static let urlcannotBeFormed: NSError = NSError(domain: "URL CANNOT BE FORMED", code: 400)
     }
 }

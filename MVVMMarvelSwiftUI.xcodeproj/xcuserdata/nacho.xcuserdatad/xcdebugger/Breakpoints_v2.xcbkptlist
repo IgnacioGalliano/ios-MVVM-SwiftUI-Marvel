@@ -3,4 +3,54 @@
    uuid = "5FFCDC31-F48D-4FAA-9DE1-079504579DFA"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2742F4FC-43DF-4846-B70C-572C2B33D228"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MVVMMarvelSwiftUI/Data/Network/URLs/BaseURLBuilder.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "buildCharacterPath()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2742F4FC-43DF-4846-B70C-572C2B33D228 - 97dd3e0cf95106b8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static MVVMMarvelSwiftUI.URLBuilder.buildCharacterPath() -&gt; Swift.String"
+                  moduleName = "MVVMMarvelSwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nacho/Documents/projects/Mobile/ios/ios-MVVM-SwiftUI-Marvel/MVVMMarvelSwiftUI/Data/Network/URLs/BaseURLBuilder.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  uuid = "2742F4FC-43DF-4846-B70C-572C2B33D228 - 97dd3e0cf95106b8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static MVVMMarvelSwiftUI.URLBuilder.buildCharacterPath() -&gt; Swift.String"
+                  moduleName = "MVVMMarvelSwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nacho/Documents/projects/Mobile/ios/ios-MVVM-SwiftUI-Marvel/MVVMMarvelSwiftUI/Data/Network/URLs/BaseURLBuilder.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

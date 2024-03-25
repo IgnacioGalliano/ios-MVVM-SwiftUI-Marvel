@@ -14,6 +14,7 @@
 		662735B52BAF1C4D008D5CA4 /* CharacterListViewModelSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662735B42BAF1C4D008D5CA4 /* CharacterListViewModelSpy.swift */; };
 		662735B72BAF22DB008D5CA4 /* CharacterListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662735B62BAF22DB008D5CA4 /* CharacterListViewModelTests.swift */; };
 		662735B92BAF82C5008D5CA4 /* GetCharactersSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662735B82BAF82C5008D5CA4 /* GetCharactersSpy.swift */; };
+		662735C02BB224A4008D5CA4 /* BaseURLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662735BF2BB224A4008D5CA4 /* BaseURLBuilder.swift */; };
 		66950D7A2BA3B6DA00DFACC3 /* MarverDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66950D792BA3B6DA00DFACC3 /* MarverDBManager.swift */; };
 		66950D7C2BA3B71800DFACC3 /* MarvelMovieDB-info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 66950D7B2BA3B71800DFACC3 /* MarvelMovieDB-info.plist */; };
 		66950D7F2BA3C13700DFACC3 /* Encryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66950D7E2BA3C13700DFACC3 /* Encryptor.swift */; };
@@ -73,6 +74,7 @@
 		662735B42BAF1C4D008D5CA4 /* CharacterListViewModelSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewModelSpy.swift; sourceTree = "<group>"; };
 		662735B62BAF22DB008D5CA4 /* CharacterListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewModelTests.swift; sourceTree = "<group>"; };
 		662735B82BAF82C5008D5CA4 /* GetCharactersSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCharactersSpy.swift; sourceTree = "<group>"; };
+		662735BF2BB224A4008D5CA4 /* BaseURLBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseURLBuilder.swift; sourceTree = "<group>"; };
 		66950D792BA3B6DA00DFACC3 /* MarverDBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarverDBManager.swift; sourceTree = "<group>"; };
 		66950D7B2BA3B71800DFACC3 /* MarvelMovieDB-info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "MarvelMovieDB-info.plist"; sourceTree = "<group>"; };
 		66950D7E2BA3C13700DFACC3 /* Encryptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encryptor.swift; sourceTree = "<group>"; };
@@ -196,6 +198,14 @@
 				662735B82BAF82C5008D5CA4 /* GetCharactersSpy.swift */,
 			);
 			path = Spies;
+			sourceTree = "<group>";
+		};
+		662735BE2BB2248B008D5CA4 /* URLs */ = {
+			isa = PBXGroup;
+			children = (
+				662735BF2BB224A4008D5CA4 /* BaseURLBuilder.swift */,
+			);
+			path = URLs;
 			sourceTree = "<group>";
 		};
 		66950D782BA3B6D100DFACC3 /* MarverDBManager */ = {
@@ -411,6 +421,7 @@
 		66DD56A22B97EE5200451CCA /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				662735BE2BB2248B008D5CA4 /* URLs */,
 				66950D7D2BA3C07400DFACC3 /* Encryptor */,
 				66DD56A32B97EE9100451CCA /* Services */,
 			);
@@ -664,6 +675,7 @@
 				66950D7A2BA3B6DA00DFACC3 /* MarverDBManager.swift in Sources */,
 				66DD56822B96A99C00451CCA /* CharacterListBuilder.swift in Sources */,
 				66DD569E2B97EDFF00451CCA /* ThumbnailDTO.swift in Sources */,
+				662735C02BB224A4008D5CA4 /* BaseURLBuilder.swift in Sources */,
 				66DD56802B96A99000451CCA /* CharactersCoordinator.swift in Sources */,
 				66DD56A52B97F04700451CCA /* GetCharactersNetworkService.swift in Sources */,
 				66DD569A2B97EDD800451CCA /* ResponseListDTO.swift in Sources */,
@@ -716,6 +728,135 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		662735BA2BB22196008D5CA4 /* Staging */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "STAGING $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Staging;
+		};
+		662735BB2BB22196008D5CA4 /* Staging */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MVVMMarvelSwiftUI/Preview Content\"";
+				DEVELOPMENT_TEAM = 7HTR2GF3VY;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MVVMMarvelSwiftUI/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = nagda.MVVMMarvelSwiftUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Staging;
+		};
+		662735BC2BB22196008D5CA4 /* Staging */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = nagda.MVVMMarvelSwiftUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MVVMMarvelSwiftUI.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MVVMMarvelSwiftUI";
+			};
+			name = Staging;
+		};
+		662735BD2BB22196008D5CA4 /* Staging */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = nagda.MVVMMarvelSwiftUIUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MVVMMarvelSwiftUI;
+			};
+			name = Staging;
+		};
 		66DD56642B954BDC00451CCA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -768,11 +909,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -825,11 +966,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "RELEASE $(inherited)";
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -974,6 +1116,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				66DD56642B954BDC00451CCA /* Debug */,
+				662735BA2BB22196008D5CA4 /* Staging */,
 				66DD56652B954BDC00451CCA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -983,6 +1126,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				66DD56672B954BDC00451CCA /* Debug */,
+				662735BB2BB22196008D5CA4 /* Staging */,
 				66DD56682B954BDC00451CCA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -992,6 +1136,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				66DD566A2B954BDC00451CCA /* Debug */,
+				662735BC2BB22196008D5CA4 /* Staging */,
 				66DD566B2B954BDC00451CCA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -1001,6 +1146,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				66DD566D2B954BDC00451CCA /* Debug */,
+				662735BD2BB22196008D5CA4 /* Staging */,
 				66DD566E2B954BDC00451CCA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
