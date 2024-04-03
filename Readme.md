@@ -8,9 +8,11 @@ Easier way:
 1) Run <a href="https://github.com/IgnacioGalliano/MarvelMockAPI">the mock server</a>
 2) Select the local scheme
  <img alt="local scheme" src="https://github.com/IgnacioGalliano/ios-MVVM-SwiftUI-Marvel/blob/main/Readme%20Assets/LocalScheme.png?raw=true">
-3) Run the application
+3. Run the application
+
 
 Other way:
+
 1) Create a new account on the <a href="https://developer.marvel.com/account"> Marvel website </a>
 2) Create a new MarvelMovieDB-info.plist file
 3) Add your keys "PRIVATE_KEY" / "PUBLIC_KEY"
