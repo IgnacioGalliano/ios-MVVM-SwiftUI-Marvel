@@ -1,4 +1,4 @@
-//
+///
 //  MVVMMarvelSwiftUIUITests.swift
 //  MVVMMarvelSwiftUIUITests
 //
@@ -8,34 +8,56 @@
 import XCTest
 
 final class MVVMMarvelSwiftUIUITests: XCTestCase {
+    private var app: XCUIApplication!
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
+    override func setUp() {
+        super.setUp()
         continueAfterFailure = false
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // UI tests must launch the application that they test.
-        let app = XCUIApplication()
+        app = XCUIApplication()
         app.launch()
-
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
 
-    func testLaunchPerformance() throws {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
-            // This measures how long it takes to launch your application.
-            measure(metrics: [XCTApplicationLaunchMetric()]) {
-                XCUIApplication().launch()
-            }
-        }
+    override func tearDown() {
+        super.tearDown()
+        app = nil
+    }
+
+    func testCharacterLists() throws {
+        let characterList = app.collectionViews["CharacterList"]
+        let firstCell = characterList.children(matching: .cell).element(boundBy: 0)
+        let secondCell = characterList.children(matching: .cell).element(boundBy: 1)
+        let thirdCell = characterList.children(matching: .cell).element(boundBy: 2)
+        let fourthCell = characterList.children(matching: .cell).element(boundBy: 3)
+        let fifthCell = characterList.children(matching: .cell).element(boundBy: 4)
+        let sixthCell = characterList.children(matching: .cell).element(boundBy: 5)
+
+        let firstTitleCell = firstCell.staticTexts["3-D Man"].firstMatch
+        let secondTitleCell = secondCell.staticTexts["A-Bomb (HAS)"].firstMatch
+        let thirdTitleCell = thirdCell.staticTexts["A.I.M."].firstMatch
+        let fourthTitleCell = fourthCell.staticTexts["Aaron Stack"].firstMatch
+        let fifthTitleCell = fifthCell.staticTexts["Abomination (Emil Blonsky)"].firstMatch
+        let sixthTitleCell = sixthCell.staticTexts["Abomination (Ultimate)"].firstMatch
+
+        XCTAssertEqual(6, characterList.cells.count, "Number of cells failure, try using an iPhone 15 and the mock server")
+        XCTAssert(firstTitleCell.exists)
+        XCTAssert(secondTitleCell.exists)
+        XCTAssert(thirdTitleCell.exists)
+        XCTAssert(fourthTitleCell.exists)
+        XCTAssert(fifthTitleCell.exists)
+        XCTAssert(sixthTitleCell.exists)
+    }
+
+    func testCharacterDetail() throws {
+        let characterList = app.collectionViews["CharacterList"]
+        let thirdCell = characterList.children(matching: .cell).element(boundBy: 2)
+
+        XCTAssert(thirdCell.exists)
+
+        thirdCell.tap()
+        let title = app.staticTexts["A.I.M."].firstMatch
+        let description = app.staticTexts["AIM is a terrorist organization bent on destroying the world."].firstMatch
+
+        XCTAssert(title.exists)
+        XCTAssert(description.exists)
     }
 }

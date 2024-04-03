@@ -41,11 +41,13 @@ struct CharacterDetailView<CharacterDetailViewModel>: View where CharacterDetail
                     .padding([.leading, .trailing], Constants.commonPadding)
                     .fontWeight(.semibold)
                     .font(.system(size: Constants.nameFontSize))
+                    .accessibilityIdentifier(Constants.characterTitleIdentifier)
                 Text(viewModel.character.description)
                     .foregroundColor(.black)
                     .frame(maxWidth: .infinity,
                            alignment: .leading)
                     .padding([.leading, .trailing], Constants.commonPadding)
+                    .accessibilityIdentifier(Constants.characterDescriptionIdentifier)
                 Spacer()
             }
             .navigationBarTitle(Localizable.characterDetail, displayMode: .inline)
@@ -67,6 +69,8 @@ fileprivate struct Constants {
     static let textPaddingTop: CGFloat = 5
     static let nameFontSize: CGFloat = 25
     static let backButtonSystemName: String = "chevron.left"
+    static let characterTitleIdentifier: String = "CharacterTitle"
+    static let characterDescriptionIdentifier: String = "CharacterDescription"
 }
 
 

@@ -29,10 +29,12 @@ struct CharacterListView<CharacterListViewModel>: View where CharacterListViewMo
                                          bottom: Constants.rowBottomInsets,
                                          trailing: Constants.rowSideInsets))
                     .listRowBackground(Color.white)
+                    .accessibilityIdentifier(Constants.characterCellIdentifier)
                 }
                 .frame(maxWidth: .infinity)
                 .listStyle(PlainListStyle())
                 .navigationBarTitle(Localizable.characterList, displayMode: .inline)
+                .accessibilityIdentifier(Constants.characterListIdentifier)
             }
         }
         .background(Color.white)
@@ -46,6 +48,8 @@ fileprivate struct Constants {
     static let rowSideInsets: CGFloat = 10
     static let rowTopInsets: CGFloat = 10
     static let rowBottomInsets: CGFloat = 10
+    static let characterListIdentifier: String = "CharacterList"
+    static let characterCellIdentifier: String = "CharacterCell"
 }
 
 // MARK: - Row Delegate

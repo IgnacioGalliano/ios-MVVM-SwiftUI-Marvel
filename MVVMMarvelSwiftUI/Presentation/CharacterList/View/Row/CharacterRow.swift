@@ -43,6 +43,7 @@ struct CharacterRow: View {
                 .frame(maxWidth: .infinity,
                        alignment: .leading)
                 .padding(.top, Constants.commonPadding)
+                .accessibilityIdentifier(Constants.characterTitleIdentifier)
 
         }
         .frame(height: Constants.rowHeight, alignment: .top)
@@ -70,4 +71,5 @@ fileprivate struct Constants {
     static let shadowRadius: CGFloat = 3
     static let shadowXRadius: CGFloat = 2
     static let shadowYRadius: CGFloat = 2
+    static let characterTitleIdentifier: String = "CharacterCellTitle"
 }

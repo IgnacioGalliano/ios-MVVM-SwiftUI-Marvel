@@ -1,0 +1,41 @@
+{
+  "configurations" : [
+    {
+      "id" : "19E00FC1-31CD-48EB-9851-5DA0622B5618",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false,
+    "commandLineArgumentEntries" : [
+      {
+        "argument" : "-staging"
+      }
+    ],
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:MVVMMarvelSwiftUI.xcodeproj",
+      "identifier" : "66DD56412B954BDA00451CCA",
+      "name" : "MVVMMarvelSwiftUI"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:MVVMMarvelSwiftUI.xcodeproj",
+        "identifier" : "66DD56512B954BDC00451CCA",
+        "name" : "MVVMMarvelSwiftUITests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:MVVMMarvelSwiftUI.xcodeproj",
+        "identifier" : "66DD565B2B954BDC00451CCA",
+        "name" : "MVVMMarvelSwiftUIUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
