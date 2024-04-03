@@ -16,6 +16,7 @@
 		662735B92BAF82C5008D5CA4 /* GetCharactersSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662735B82BAF82C5008D5CA4 /* GetCharactersSpy.swift */; };
 		662735C02BB224A4008D5CA4 /* BaseURLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662735BF2BB224A4008D5CA4 /* BaseURLBuilder.swift */; };
 		666BD22E2BBD89E300F3099D /* MVVMMarvelSwiftUIPerfomanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666BD22D2BBD89E300F3099D /* MVVMMarvelSwiftUIPerfomanceTests.swift */; };
+		666BD2302BBD9B1100F3099D /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 666BD22F2BBD9B1100F3099D /* Launch Screen.storyboard */; };
 		66950D7A2BA3B6DA00DFACC3 /* MarverDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66950D792BA3B6DA00DFACC3 /* MarverDBManager.swift */; };
 		66950D7C2BA3B71800DFACC3 /* MarvelMovieDB-info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 66950D7B2BA3B71800DFACC3 /* MarvelMovieDB-info.plist */; };
 		66950D7F2BA3C13700DFACC3 /* Encryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66950D7E2BA3C13700DFACC3 /* Encryptor.swift */; };
@@ -78,6 +79,7 @@
 		662735BF2BB224A4008D5CA4 /* BaseURLBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseURLBuilder.swift; sourceTree = "<group>"; };
 		662735C52BB3A16C008D5CA4 /* MVVMMarvelSwiftUILocal.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = MVVMMarvelSwiftUILocal.xctestplan; sourceTree = "<group>"; };
 		666BD22D2BBD89E300F3099D /* MVVMMarvelSwiftUIPerfomanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMMarvelSwiftUIPerfomanceTests.swift; sourceTree = "<group>"; };
+		666BD22F2BBD9B1100F3099D /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		66950D792BA3B6DA00DFACC3 /* MarverDBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarverDBManager.swift; sourceTree = "<group>"; };
 		66950D7B2BA3B71800DFACC3 /* MarvelMovieDB-info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "MarvelMovieDB-info.plist"; sourceTree = "<group>"; };
 		66950D7E2BA3C13700DFACC3 /* Encryptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encryptor.swift; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 				66DD56B22B9CC60D00451CCA /* MainPage.swift */,
 				66DD56492B954BDC00451CCA /* Assets.xcassets */,
 				66DD564B2B954BDC00451CCA /* Preview Content */,
+				666BD22F2BBD9B1100F3099D /* Launch Screen.storyboard */,
 			);
 			path = MVVMMarvelSwiftUI;
 			sourceTree = "<group>";
@@ -641,6 +644,7 @@
 				66950D7C2BA3B71800DFACC3 /* MarvelMovieDB-info.plist in Resources */,
 				66DD564D2B954BDC00451CCA /* Preview Assets.xcassets in Resources */,
 				66DD564A2B954BDC00451CCA /* Assets.xcassets in Resources */,
+				666BD2302BBD9B1100F3099D /* Launch Screen.storyboard in Resources */,
 				66DD57322BA116E500451CCA /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -822,6 +826,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1008,6 +1013,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1038,6 +1044,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
