@@ -41,6 +41,7 @@ struct CharacterListView<CharacterListViewModel>: View where CharacterListViewMo
         .onAppear {
             viewModel.loadCharactersAwait()
         }
+        .background(Color.white)
     }
 }
 

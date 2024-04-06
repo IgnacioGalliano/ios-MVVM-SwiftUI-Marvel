@@ -8,7 +8,7 @@
 import Foundation
 @testable import MVVMMarvelSwiftUI
 
-class GetCharactersSpy: GetCharacters {
+class GetCharactersSpy: GetCharactersUseCase {
     var invokedExecuteSuccess = false
     var invokedExecuteSuccessCount = 0
     var stubbedExecuteSuccessSuccessResult: ([CharacterModel], Void)?

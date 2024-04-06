@@ -1,22 +1,22 @@
 //
-//  GetCharacters.swift
+//  GetCharactersUseCase.swift
 //  MVVMMarvelSwiftUI
 //
-//  Created by Nacho on 05/03/2024.
+//  Created by Nacho on 06/04/2024.
 //
 
 import Foundation
 
-protocol GetCharacters {
+protocol GetCharactersUseCase {
     func execute(success: @escaping ([CharacterModel]) -> Void,
                  failure: @escaping (GetCharactersError) -> Void)
     func execute() async throws -> [CharacterModel]
 }
 
-struct DefaultGetCharacters: GetCharacters {
+struct DefaultGetCharactersUseCase: GetCharactersUseCase {
     private let repository: CharactersRepository
 
-    init(repository: CharactersRepository) {
+    init(repository: CharactersRepository = DataProvider.shared.getCharactersRepository()) {
         self.repository =  repository
     }
 

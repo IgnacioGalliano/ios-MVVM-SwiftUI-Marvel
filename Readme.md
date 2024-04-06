@@ -24,15 +24,21 @@ Other way:
 <div align="center">
 <img alt="local scheme" src="https://github.com/IgnacioGalliano/ios-MVVM-SwiftUI-Marvel/blob/main/Readme%20Assets/App.gif?raw=true"></div>
 
+### <b>UnitTests & UITests</b>
+To run the tests targets, you need to use an iphone 15 simulator with iOS 17.0. Why? because the snapshot tests refenrences had been done on this device and iOS version.
+Also you need to run <a href="https://github.com/IgnacioGalliano/MarvelMockAPI">the mock server</a> and use the local scheme to assert all the UITests
+
+
 ### <b>Clean Architecture and MVVM</b>
 
 In this example we applied clean code with the three layers 
 
 <ins>Presentation layer (MVVM)</ins>: contains UI (UIViewControllers or SwiftUI Views). Views are coordinated by ViewModels (Presenters) which execute one or many Use Cases. Presentation Layer depends only on the Domain Layer.
 
-<ins>Domain layer</ins>: It contains Entities(Business Models), Errors, etc.
+<ins>Domain layer</ins>: It contains Entities, UseCases, Errors, etc.
 
 <ins>Data layer</ins>: Data Layer contains Repository Implementations and one or many Data Sources. Repositories are responsible for coordinating data from different Data Sources. Data Source can be Remote or Local (for example persistent database). Data Layer depends only on the Domain Layer. In this layer, we can also add mapping of Network JSON Data.
+
 
 
 

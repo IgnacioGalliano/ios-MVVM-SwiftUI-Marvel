@@ -19,13 +19,13 @@ protocol CharacterListViewModelable: AnyObject, ObservableObject {
 class CharacterListViewModel: ObservableObject, CharacterListViewModelable {
     @Published var characterList: [CharacterModel] = []
     @Published var showLoading: Bool = false
-    private let getCharacters: GetCharacters
+    private let getCharacters: GetCharactersUseCase
 
     var getQuantityOfCharacters: Int {
         return characterList.count
     }
 
-    init(getCharacters: GetCharacters = ActionProvider.getCharacters()) {
+    init(getCharacters: GetCharactersUseCase = DefaultGetCharactersUseCase()) {
         self.getCharacters = getCharacters
     }
 
